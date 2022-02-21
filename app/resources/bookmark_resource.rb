@@ -10,6 +10,7 @@ class BookmarkResource < ApplicationResource
 
   # Indirect associations
 
+  has_one    :dish
   has_one    :user
 
   filter :user_id, :integer do
