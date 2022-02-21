@@ -1,0 +1,32 @@
+<!-- Form venue start -->
+<%= form_with(model: @venue, local: true) do |f| %>
+<!-- Form venue end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <%= f.label :name %>
+
+    <!-- Input for name start -->
+    <%= f.text_field :name, class: "form-control" %>
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for neighborhood_id start -->
+  <!-- Input for neighborhood_id start -->
+  <%= f.hidden_field :neighborhood_id, value: @neighborhood.id %>
+  <!-- Input for neighborhood_id end -->
+  <!-- Label and input for neighborhood_id end -->
+
+  <!-- Label and input for map_address start -->
+  <div class="form-group">
+    <%= f.label :map_address %>
+
+    <!-- Input for map_address start -->
+    <%= f.text_field :map_address, class: "form-control" %>
+    <!-- Input for map_address end -->
+  </div>
+  <!-- Label and input for map_address end -->
+
+  <%= f.submit "Create venue", class: "btn btn-block btn-outline-secondary" %>
+<% end %>
