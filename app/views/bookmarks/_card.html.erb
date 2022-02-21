@@ -7,7 +7,11 @@
     <dl class="mb-1">
       <dt>Venue</dt>
       <!-- Display venue_id start -->
-      <dd><%= bookmark.venue_id %></dd>
+      <dd>
+        <% if @bookmark.venue.present? %>
+          <%= link_to bookmark.venue, bookmark.venue %>
+        <% end %>
+      </dd>
       <!-- Display venue_id end -->
 
     </dl>
