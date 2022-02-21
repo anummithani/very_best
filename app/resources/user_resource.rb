@@ -11,4 +11,12 @@ class UserResource < ApplicationResource
 
   # Indirect associations
 
+  has_many :bookmarks do
+    assign_each do |user, bookmarks|
+      bookmarks.select do |b|
+        b.id.in?(user.bookmarks.map(&:id))
+      end
+    end
+  end
+
 end
