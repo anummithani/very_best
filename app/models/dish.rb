@@ -10,8 +10,8 @@ class Dish < ApplicationRecord
   # Indirect associations
 
   has_one    :bookmark,
-             :through => :venue,
-             :source => :bookmarks
+             through: :venue,
+             source: :bookmarks
 
   # Validations
 
@@ -20,5 +20,4 @@ class Dish < ApplicationRecord
   def to_s
     name
   end
-
 end

@@ -6,12 +6,12 @@ class Bookmark < ApplicationRecord
   # Indirect associations
 
   has_one    :dish,
-             :through => :venue,
-             :source => :dishes
+             through: :venue,
+             source: :dishes
 
   has_one    :user,
-             :through => :dish,
-             :source => :user
+             through: :dish,
+             source: :user
 
   # Validations
 
@@ -20,5 +20,4 @@ class Bookmark < ApplicationRecord
   def to_s
     venue.to_s
   end
-
 end
