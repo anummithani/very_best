@@ -14,6 +14,8 @@ RSpec.describe Dish, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_one(:bookmark) }
+
     end
 
     describe "Validations" do

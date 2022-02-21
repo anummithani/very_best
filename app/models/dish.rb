@@ -9,6 +9,10 @@ class Dish < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :bookmark,
+             :through => :venue,
+             :source => :bookmarks
+
   # Validations
 
   # Scopes

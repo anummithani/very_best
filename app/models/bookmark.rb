@@ -5,6 +5,10 @@ class Bookmark < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :dish,
+             :through => :venue,
+             :source => :dishes
+
   has_one    :user,
              :through => :dish,
              :source => :user
