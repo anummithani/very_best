@@ -6,6 +6,8 @@ class BookmarkResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :venue
+
   # Indirect associations
 
 end
